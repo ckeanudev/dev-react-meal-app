@@ -1,7 +1,7 @@
 :root {
   --primary-background: #f9f8f8;
   --secondary-background: #e9ecef;
-  --primary-button-color: #e85d04;
+  --primary-button-color: hsl(23, 97%, 46%);
   --secondary-button-color: #f48c06;
   --tertiary-button-color: #faa307;
   --primary-font-color: #212529;
@@ -120,6 +120,47 @@
   text-align: justify;
   color: var(--secondary-font-color);
   line-height: 1.4rem;
+}
+
+.no_result_h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--primary-font-color);
+}
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0rem 0rem;
+}
+
+.loading p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* ---------------------------- */

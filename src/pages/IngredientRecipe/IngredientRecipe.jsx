@@ -6,12 +6,16 @@ import { useParams } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+
 const IngredientRecipe = () => {
   let params = useParams();
 
   const [mealInfo, setMealInfo] = useState([]);
 
   const [recipeFocus, setRecipeFocus] = useState("Ingredients");
+
+  const [show, setShow] = useState("Start");
 
   const focusStyleBtn = {
     backgroundColor: "#e85d04",
@@ -22,12 +26,21 @@ const IngredientRecipe = () => {
   }, []);
 
   const getMealInfo = async (id) => {
-    const api = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
-    );
-    const data = await api.json();
-    setMealInfo(data.meals[0]);
+    try {
+      const api = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+      );
+      const data = await api.json();
+      console.log(data);
+      setMealInfo(data.meals[0]);
+      setShow("Show");
+    } catch (error) {
+      console.log("No");
+      setShow("NoShow");
+    }
   };
+
+  console.log(mealInfo);
 
   return (
     <motion.div
@@ -38,7 +51,7 @@ const IngredientRecipe = () => {
       className={styles.lookup_container}
     >
       <div className={styles.lookup_inner_container}>
-        {mealInfo ? (
+        {show === "Show" ? (
           <>
             <h2>{mealInfo.strMeal}</h2>
             <div className={styles.lookup_inner_grid_container}>
@@ -203,8 +216,14 @@ const IngredientRecipe = () => {
               </div>
             </div>
           </>
+        ) : show === "NoShow" ? (
+          <h1 className={styles.no_result_h1}>No Results</h1>
         ) : (
-          <h1>No Results</h1>
+          <div className={styles.loading}>
+            <p>
+              <AiOutlineLoading3Quarters size={"3rem"} color={"#f48c06"} />
+            </p>
+          </div>
         )}
       </div>
     </motion.div>

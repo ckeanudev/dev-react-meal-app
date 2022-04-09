@@ -1,0 +1,165 @@
+:root {
+  --primary-background: #f9f8f8;
+  --secondary-background: #e9ecef;
+  --primary-button-color: #e85d04;
+  --secondary-button-color: #f48c06;
+  --tertiary-button-color: #faa307;
+  --primary-font-color: #212529;
+  --secondary-font-color: #343a40;
+  --tertiary-font-color: #495057;
+}
+
+.lookup_container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4.5rem 1rem 5rem;
+  background-color: var(--primary-background);
+}
+
+.lookup_inner_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lookup_inner_container h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  background-color: var(--secondary-button-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+}
+
+.lookup_inner_grid_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+}
+
+.lookup_left {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.left_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.meal_img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.lookup_left h3 {
+  font-size: 1.1rem;
+  color: var(--primary-font-color);
+  margin: 0.5rem 0rem 0.3rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--primary-font-color);
+}
+
+.lookup_left h4 {
+  font-size: 1rem;
+  color: var(--primary-font-color);
+  margin: 0.5rem 0rem;
+  font-weight: 600;
+}
+
+.meal_YT_link {
+  color: var(--secondary-button-color);
+  margin-bottom: 0.5rem;
+}
+
+.lookup_right {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.button_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 0.7rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.button_container button {
+  padding: 0.3rem;
+  border: none;
+  background-color: var(--tertiary-button-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+.button_container button:hover {
+  background-color: var(--secondary-button-color);
+}
+
+.right_content {
+  padding: 1rem;
+}
+
+.right_content h3 {
+  color: var(--primary-font-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.right_content li {
+  color: var(--secondary-font-color);
+  margin-bottom: 0.3rem;
+}
+
+.right_content p {
+  text-align: justify;
+  color: var(--secondary-font-color);
+  line-height: 1.4rem;
+}
+
+/* ---------------------------- */
+
+.instruction_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (max-width: 750px) {
+  .lookup_container {
+    padding: 4rem 1rem 5rem;
+  }
+
+  .lookup_inner_container h2 {
+    font-size: 1.3rem;
+  }
+
+  .lookup_inner_grid_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .lookup_left {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .left_content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meal_img {
+    max-width: 200px;
+    margin: auto;
+    border-radius: 10px;
+  }
+}

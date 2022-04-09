@@ -1,0 +1,58 @@
+:root {
+  --primary-background: #f9f8f8;
+  --secondary-background: #e9ecef;
+  --primary-button-color: #e85d04;
+  --primary-button-color-hover: #e4712a;
+  --secondary-button-color: #f48c06;
+  --tertiary-button-color: #faa307;
+  --primary-font-color: #212529;
+  --secondary-font-color: #343a40;
+  --tertiary-font-color: #495057;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--primary-background);
+}
+
+nav {
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  background-color: var(--primary-background);
+  z-index: 10;
+}
+
+.inner_nav {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--primary-font-color);
+  justify-content: space-between;
+}
+
+.inner_nav div {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  color: var(--primary-font-color);
+}
+
+.credit {
+  cursor: pointer;
+}
+
+nav h1 {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}

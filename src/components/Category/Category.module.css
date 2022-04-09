@@ -1,0 +1,60 @@
+:root {
+  --primary-background: #f9f8f8;
+  --secondary-background: #e9ecef;
+  --primary-button-color: #e85d04;
+  --secondary-button-color: #f48c06;
+  --tertiary-button-color: #faa307;
+  --primary-font-color: #212529;
+  --secondary-font-color: #343a40;
+  --tertiary-font-color: #495057;
+}
+
+.category_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.category_card {
+  background-color: var(--secondary-button-color);
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.category_card:hover {
+  background-color: var(--tertiary-button-color);
+  transform: translateY(-2px);
+}
+
+.category_card img {
+  width: 100%;
+}
+
+.category_card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-background);
+}
+
+@media (max-width: 700px) {
+  .category_container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.6rem;
+  }
+}
+@media (max-width: 550px) {
+  .category_container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category_card h3 {
+    font-size: 1rem;
+  }
+}

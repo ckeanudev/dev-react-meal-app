@@ -1,0 +1,95 @@
+:root {
+  --primary-background: #f9f8f8;
+  --secondary-background: #e9ecef;
+  --primary-button-color: #e85d04;
+  --secondary-button-color: #f48c06;
+  --tertiary-button-color: #faa307;
+  --primary-font-color: #212529;
+  --secondary-font-color: #343a40;
+  --tertiary-font-color: #495057;
+}
+
+.home_container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  background-color: var(--primary-background);
+}
+
+.home_inner_container {
+  max-width: 1200px;
+  margin: 0rem auto;
+  padding: 4.5rem 1rem 1rem;
+}
+
+/* -------------------- Search Container */
+
+.search_container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.search_inner_container {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search_container input {
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  width: 100%;
+  border: none;
+  background-color: var(--secondary-background);
+}
+
+.search_container input:focus {
+  outline: 2px solid var(--secondary-button-color);
+}
+
+.search_container button {
+  display: flex;
+  align-items: center;
+  padding: 0.55rem;
+  border-radius: 50px;
+  margin-left: 5px;
+  border: none;
+  background-color: var(--secondary-button-color);
+  cursor: pointer;
+}
+
+.search_container button:hover {
+  background-color: var(--tertiary-button-color);
+}
+
+.search_container button:focus {
+  outline: 2px solid var(--secondary-button-color);
+}
+
+/* ---------------------------------------------- */
+
+.back_category {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+.back_category:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+.h1_category {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-font-color);
+}
+
+/* --------------------------------- Footer ------------- */

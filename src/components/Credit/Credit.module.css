@@ -1,0 +1,63 @@
+:root {
+  --primary-background: #f9f8f8;
+  --secondary-background: #e9ecef;
+  --primary-button-color: #e85d04;
+  --primary-button-color-hover: #e4712a;
+  --secondary-button-color: #f48c06;
+  --tertiary-button-color: #faa307;
+  --primary-font-color: #212529;
+  --secondary-font-color: #343a40;
+  --tertiary-font-color: #495057;
+}
+
+.credit_container {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  padding: 1rem;
+}
+
+.credit_inner_container {
+  max-width: 500px;
+  margin: 12rem auto 0;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary-background);
+  text-align: center;
+  position: relative;
+}
+
+.credit_inner_container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.credit_inner_container p {
+  margin: 1.6rem;
+  font-weight: 500;
+}
+
+.credit_inner_container a {
+  text-decoration: none;
+  color: var(--primary-button-color);
+}
+.credit_inner_container a:hover {
+  text-decoration: underline;
+  color: var(--secondary-button-color);
+}
+
+.line {
+  width: 100%;
+  border: 0.2px solid var(--tertiary-font-color);
+  background-color: var(--tertiary-font-color);
+}

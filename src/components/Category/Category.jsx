@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 
 import styleCat from "./Category.module.css";
 
@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const Category = () => {
   let navigate = useNavigate();
 
-  const { categories, setCategories } = useContext(AppContext);
+  const { categories } = useContext(AppContext);
 
   return (
     <motion.div

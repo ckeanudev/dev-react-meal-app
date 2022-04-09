@@ -2,13 +2,12 @@ import React from "react";
 
 import styles from "./SearchedIngredient.module.css";
 
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
 const SearchedIngredient = ({ allSearchIngredient }) => {
   let navigate = useNavigate();
-  let params = useParams();
 
   return (
     <motion.div
